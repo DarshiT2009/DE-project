@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story generator</title>
+  <link rel = "stylesheet" href="story.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Story generator</h1>
+    <div class="story-generator">
+      <div class="input-section">
+        <label for="story-description">Describe the story</label>
+        <textarea id = "story-description" placeholder="Briefly outline your idea ... "></textarea>
+
+        <div class="input-group">
+          <div class="input-item">
+            <label for = "generate">Generate</label>
+            <select id = "generate" >
+              <option value="No specific"></option>
+              <option value="Fantasy"></option>
+              <option value="Adventure"></option>
+              <option value="Horror"></option>
+            </select>
+          </div>
+
+          <div class="input-item">
+            <label for = "Creativity">Creativity level</label>
+            <input type = "number" id = "creativity" value="5" min = "1" max="10">
+          </div>
+        </div>
+
+        <div class="slider-group">
+          <label for="story-length">Story length</label>
+          <input type = "range" id = "story-length" min ="100" max = "1000" value="500" step="50">
+          <span id = "length-value">500</span>
+        </div>
+
+        <div class="input-item">
+          <label for ="language">language</label>
+          <select id = "language">
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+          </select>
+        </div>
+
+        <button id = "generate-button" >Write</button>
+      </div>
+
+      <div class="result-section">
+        <h2>your story</h2>
+        <textarea id = "result" readonly>Your generated result will appear here.</textarea>
+        <div class="result-actions">
+          <button id = "delete-button">Delete</button>
+          <button id = "copy-button">Copy</button>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script src = "story.js"></script>
+</body>
+<!-- </html> -->
